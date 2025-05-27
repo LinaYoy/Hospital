@@ -129,7 +129,7 @@ namespace WebApplication2_hl_
             }
         }
 
-        //удаляем приема по id
+        //удаляем прием по id
         public async Task<bool> DeleteAppointment(Supabase.Client _supabaseClient, int appointmentId)
         {
             try

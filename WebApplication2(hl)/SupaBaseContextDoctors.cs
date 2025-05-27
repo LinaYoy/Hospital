@@ -34,7 +34,7 @@ namespace WebApplication2_hl_
         }
 
 
-        //Обновление имени пользователя
+        //Обновление имени доктора
         public async Task<bool> UpdateDoctorName(Supabase.Client _supabaseClient, Doctor updatedDoctor)
         {
             try
@@ -53,7 +53,7 @@ namespace WebApplication2_hl_
             }
         }
 
-        //01.04 - обновление логина пользоавтеля
+        // обновление специальности доктора
         public async Task<bool> UpdateDoctorSpecialization(Supabase.Client _supabaseClient, Doctor dSpecialization)
         {
             try
@@ -72,7 +72,7 @@ namespace WebApplication2_hl_
             }
         }
 
-        //обновление department
+        //обновление department, отделения доктора
         public async Task<bool> UpdateDoctorDepartment(Supabase.Client _supabaseClient, Doctor doctorDepartment)
         {
             try

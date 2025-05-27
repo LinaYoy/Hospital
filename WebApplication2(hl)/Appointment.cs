@@ -23,6 +23,3 @@ namespace WebApplication2_hl_
 
 }
 
-/*
- * yt vjue cj[hfybnm
- * */

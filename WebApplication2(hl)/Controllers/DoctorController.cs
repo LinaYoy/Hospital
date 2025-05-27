@@ -105,7 +105,7 @@ namespace WebApplication2_hl_.Controllers
             }
         }
 
-        // update specialization
+        // update specialization, обновление специализации доктора
         [HttpPut("UpdateDoctorSpecialization", Name = "UpdateDoctorSpecialization")]
         public async Task<ActionResult> UpdateDoctorSpecialization([FromBody] dSpecialization dSpec)
         {
@@ -141,7 +141,7 @@ namespace WebApplication2_hl_.Controllers
         }
 
 
-        //Update doctorDepartment (02.04)
+        //Update doctorDepartment, обновление отдела доктора
         [HttpPut("UpdateDoctorDepartment", Name = "UpdateDoctorDepartment")]
         public async Task<ActionResult> UpdateDoctorDepartment([FromBody] doctorDepartment docDep)
         {
@@ -205,7 +205,7 @@ namespace WebApplication2_hl_.Controllers
 
     //Валидация данных!
 
-    //Для обновления имени пользователя
+    //Для обновления имени доктора
     public class UpdateDName
     {
         [JsonProperty("doctor_id")]
@@ -214,7 +214,7 @@ namespace WebApplication2_hl_.Controllers
         public string Full_name { get; set; }
     }
 
-    //UpdateSpecialization
+    //UpdateSpecialization, обновление специализации
     public class dSpecialization
     {
         [JsonProperty("doctor_id")]
@@ -224,7 +224,7 @@ namespace WebApplication2_hl_.Controllers
     }
 
 
-    //Update doctorDepartment
+    //Update doctorDepartment, департамент, отделение
     public class doctorDepartment
     {
         [JsonProperty("doctor_id")]
@@ -248,6 +248,7 @@ namespace WebApplication2_hl_.Controllers
 
     }
 
+    // Для мметода удаления доктора
     public class deleteDoctor
     {
         [JsonProperty("doctor_id")]

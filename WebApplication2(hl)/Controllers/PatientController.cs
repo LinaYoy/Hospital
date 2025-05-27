@@ -122,13 +122,12 @@ namespace WebApplication2_hl_.Controllers
                     return BadRequest("Некорректный идентификатор пациента");
                 }
 
-                // Проверка, что дата рождения не равна default(DateTime)
                 if (patientBirth.Birth_date == default(DateTime))
                 {
                     return BadRequest("Дата рождения должна быть указана");
                 }
 
-                // Далее, если нужно, можно проверить, что дата не в будущем
+                // Дата не в будущем
                 if (patientBirth.Birth_date > DateTime.Now)
                 {
                     return BadRequest("Дата рождения не может быть в будущем");
@@ -319,7 +318,7 @@ namespace WebApplication2_hl_.Controllers
         public string Insurance_number { get; set; }
     }
 
-    // Для обновления названия города
+    // Для обновления имени пациента
     public class UpdatePatientName
     {
         [JsonProperty("patient_id")]
@@ -328,7 +327,7 @@ namespace WebApplication2_hl_.Controllers
         public string Full_name { get; set; }
     }
 
-    // Для обновления населения города
+    // Для обновления даты рождения пациента
     public class UpdatePatientBirth
     {
         [JsonProperty("patient_id")]
@@ -337,7 +336,7 @@ namespace WebApplication2_hl_.Controllers
         public DateTime Birth_date { get; set; }
     }
 
-    // Для обновления страны города
+    // Для обновления адреса пациента
     public class UpdatePatientAddress
     {
         [JsonProperty("patient_id")]
