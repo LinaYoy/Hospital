@@ -234,8 +234,6 @@ namespace WebApplication2_hl_.Controllers
     }
 
 
-    }
-
     //Добавление нового доктора 
     public class DoctorData
     {
@@ -261,5 +259,9 @@ namespace WebApplication2_hl_.Controllers
         [JsonProperty("department")]
         public string Department { get; set; }
     }
+
+
+}
+
 
 

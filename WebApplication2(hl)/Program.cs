@@ -19,10 +19,12 @@ internal class Program
 
         SupaBaseContextDoctors supabaseContextDoctors = new();
         SupaBaseContextPatient supabaseContextPatient = new();
+        SupaBaseContextAppointment supabaseContextAppointment = new();
 
         builder.Services.AddSingleton(supabase);
         builder.Services.AddSingleton(supabaseContextDoctors);
         builder.Services.AddSingleton(supabaseContextPatient);
+        builder.Services.AddSingleton(supabaseContextAppointment);
 
         var app = builder.Build();
 

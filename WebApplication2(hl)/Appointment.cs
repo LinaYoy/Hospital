@@ -9,15 +9,15 @@ namespace WebApplication2_hl_
         [PrimaryKey("appointment_id")]
         public int Appointment_id { get; set; }
         [Column("patient_id")]
-        public string Patient_id { get; set; }
+        public int Patient_id { get; set; }
         [Column("doctor_id")]
-        public string Doctor_id { get; set; }
+        public int Doctor_id { get; set; }
         [Column("appointment_date")]
-        public string Appointment_date { get; set; }
+        public DateTime Appointment_date { get; set; }
         [Column("diagnosis")]
         public string Diagnosis { get; set; }
-        [Column("insurance_number")]
-        public int Insurance_number { get; set; }
+        [Column("treatment")]
+        public string Treatment { get; set; }
 
     }
 
