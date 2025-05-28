@@ -55,7 +55,7 @@ namespace WebApplication2_hl_.Controllers
                     bool result = await _supabaseContext.InsertDoctor(_supabaseClient, newDoctor);
                     if (result == true)
                     {
-                        return Ok("Регистрация прошла успешно");
+                        return Ok("Добавление прошло успешно");
                     }
                     else
                     {
@@ -141,7 +141,7 @@ namespace WebApplication2_hl_.Controllers
         }
 
 
-        //Update doctorDepartment, обновление отдела доктора
+        //Update doctorDepartment, обновление отделения
         [HttpPut("UpdateDoctorDepartment", Name = "UpdateDoctorDepartment")]
         public async Task<ActionResult> UpdateDoctorDepartment([FromBody] doctorDepartment docDep)
         {
@@ -158,7 +158,7 @@ namespace WebApplication2_hl_.Controllers
                     Department = docDep.Department,
                 };
 
-                // Обновляем доктора
+                // Обновляем 
                 bool result = await _supabaseContext.UpdateDoctorDepartment(_supabaseClient, updatedDoctorDepartment);
                 if (result)
                 {
@@ -177,7 +177,7 @@ namespace WebApplication2_hl_.Controllers
         }
 
 
-       //удаление докторов
+       //удаление доктора
 
         [HttpDelete("DeleteDoctor", Name = "DeleteDoctor")]
 

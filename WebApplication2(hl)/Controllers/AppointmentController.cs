@@ -128,11 +128,11 @@ namespace WebApplication2_h1_.Controllers
                 bool result = await _supabaseContext.UpdateDoctortId(_supabaseClient, updatedAppointment);
                 if (result)
                 {
-                    return Ok("Номер id доктора успешно обновлен");
+                    return Ok("Id доктора успешно обновлен");
                 }
                 else
                 {
-                    return BadRequest("Не удалось обновить номер id доктора");
+                    return BadRequest("Не удалось обновить Id доктора");
                 }
             }
             catch (Exception ex)
@@ -156,7 +156,7 @@ namespace WebApplication2_h1_.Controllers
 
                 // Парсинг строки в DateTime
                 if (!DateTime.TryParse(updateData.Appointment_date, out DateTime parsedDate))
-                    return BadRequest("Некорректный формат даты. Используйте ГГГГ-ММ-ДД или полный ISO формат.");
+                    return BadRequest("Некорректный формат даты. Используйте ГГГГ-ММ-ДД.");
 
                 if (parsedDate > DateTime.Now)
                     return BadRequest("Дата не может быть в будущем.");
@@ -290,7 +290,7 @@ namespace WebApplication2_h1_.Controllers
 
         }
 
-    // Для обновления номера id patient
+    // Для обновления id patient
     public class UpdatePatientId
     {
         [JsonProperty("appointment_id")]
@@ -299,7 +299,7 @@ namespace WebApplication2_h1_.Controllers
         public int Patient_id { get; set; }
     }
 
-    // Для обновления номера id doctor
+    // Для обновления id doctor
     public class UpdateDoctorId
     {
         [JsonProperty("appointment_id")]
@@ -315,7 +315,7 @@ namespace WebApplication2_h1_.Controllers
         public int Appointment_id { get; set; }
 
         [JsonProperty("appointment_date")]
-        public string Appointment_date { get; set; } // для удобства парсинга
+        public string Appointment_date { get; set; } // string - для удобства парсинга 
     }
 
     // Для обновления диагноза

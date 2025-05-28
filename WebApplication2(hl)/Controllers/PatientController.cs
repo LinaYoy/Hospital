@@ -176,7 +176,7 @@ namespace WebApplication2_hl_.Controllers
                 bool result = await _supabaseContext.UpdatePatientAddress(_supabaseClient, updatedPatient);
                 if (result)
                 {
-                    return Ok("Алрес пациента успешно обновлен");
+                    return Ok("Адрес пациента успешно обновлен");
                 }
                 else
                 {
